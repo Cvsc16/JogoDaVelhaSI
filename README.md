@@ -1,5 +1,11 @@
 # Jogo da Velha com RMI
 
+## Alunos
+
+Caio Vinicius de Souza Costa - 83647
+
+Diogo Vitor de Oliveira Leme - 836846
+
 ## Visão Geral
 Este é um simples jogo da velha implementado em Java utilizando RMI (Remote Method Invocation). O jogo permite que dois jogadores joguem entre si em diferentes máquinas através de uma comunicação remota.
 
@@ -21,8 +27,11 @@ java -jar GameServer.jar <ip> <porta>
 
 ### Exemplo
 Para rodar o servidor na máquina local na porta 8080:
-java -jar GameServer.jar localhost 8080
+
+`java -jar GameServer.jar localhost 8080`
 
 Para rodar o cliente na mesma máquina, conectando-se ao servidor local:
-java -jar GameClient.jar jogador1 localhost 8080
-java -jar GameClient.jar jogador2 localhost 8080
+
+`java -jar GameClient.jar jogador1 localhost 8080`
+
+`java -jar GameClient.jar jogador2 localhost 8080`
