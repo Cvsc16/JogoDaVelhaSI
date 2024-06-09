@@ -6,39 +6,39 @@ Caio Vinicius de Souza Costa - 83647
 
 Diogo Vitor de Oliveira Leme - 836846
 
-## Visão Geral
-Este é um simples jogo da velha implementado em Java utilizando RMI (Remote Method Invocation). O jogo permite que dois jogadores joguem entre si em diferentes máquinas através de uma comunicação remota.
+## Descrição
 
-## Como Executar
-Para rodar o jogo você pode executar diretamente da IDE a classe `GameServer` informando `ip` e `porta` e logo depois a classe `GameClient` informando `nome` `ip` e `porta` correspondentes ao `GameServer` iniciado, assim que 2 jogadores estiverem conectados, o jogo será iniciado.
+Este repositório contém uma aplicação completa para gerenciamento de reservas de salas, composta por três principais componentes:
 
-Para rodar diretmaente de um terminal siga as instruções abaixo:
+1. **API (Back-end)**: Desenvolvida com FastAPI, uma moderna framework para construção de APIs em Python.
+2. **Banco de Dados**: Utiliza PostgreSQL para armazenar e gerenciar todos os dados da aplicação de forma segura e eficiente.
+3. **Aplicativo Mobile (Front-end)**: Um app móvel desenvolvido em Kotlin, fornecendo uma interface amigável para usuários realizarem reservas de salas.
 
-### Servidor
-1. Abra um terminal ou prompt de comando.
-2. Navegue até o diretório onde o arquivo `GameServer.jar` está localizado.
-3. Execute o comando abaixo, substituindo `<ip>` e `<porta>` pelo endereço IP e porta desejados:
-   
-`java -jar GameServer.jar <ip> <porta>`
+## Componentes
 
-4. O servidor estará agora rodando e aguardando a conexão dos jogadores.
+### 1. API (Back-end) - FastAPI
+A API é responsável por gerenciar todas as operações do sistema, incluindo a criação, atualização, leitura e exclusão de reservas de salas. Ela foi desenvolvida utilizando FastAPI devido ao seu desempenho, facilidade de uso e suporte para tipagem estática.
 
-### Cliente
-1. Abra um terminal ou prompt de comando.
-2. Navegue até o diretório onde o arquivo `GameClient.jar` está localizado.
-3. Execute o comando abaixo, substituindo `<nome>` pelo nome desejado, `<ip>` pelo endereço IP do servidor e `<porta>` pela porta do servidor:
+#### Principais Recursos:
+- Criação de professores, salas e reservas
+- Atualização de cadastro existentes
+- Listagem de cadastros existentes
+- Exclusão de cadastros existentes
 
-`java -jar GameClient.jar <nome> <ip> <porta>`
+### 2. Banco de Dados - PostgreSQL
+O PostgreSQL é utilizado como o banco de dados principal da aplicação. Ele armazena todas as informações de reservas, usuários e salas. A escolha pelo PostgreSQL se deu pela sua robustez, segurança e capacidade de lidar com grandes volumes de dados.
 
-4. O cliente irá se conectar ao servidor e você poderá começar a jogar.
+#### Estrutura Básica:
+- Tabela de Professores
+- Tabela de Salas
+- Tabela de Reservas
 
-### Exemplo
-Para rodar o servidor na máquina local na porta 8080:
+### 3. Aplicativo Mobile (Front-end) - Kotlin
+O aplicativo móvel, desenvolvido em Kotlin, fornece uma interface intuitiva e eficiente para que os usuários possam realizar reservas de salas diretamente de seus dispositivos móveis. O app comunica-se com a API para realizar todas as operações necessárias.
 
-`java -jar GameServer.jar localhost 8080`
-
-Para rodar o cliente na mesma máquina, conectando-se ao servidor local:
-
-`java -jar GameClient.jar jogador1 localhost 8080`
-
-`java -jar GameClient.jar jogador2 localhost 8080`
+#### Principais Funcionalidades:
+- Visualização de professores, reservas e salas
+- Criação de novos cadastros
+- Realização de reservas
+- Edição de cadastros existentes
+- Exclusão de cadastros existentes
